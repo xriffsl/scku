@@ -20,9 +20,9 @@ echo -e "\e[31mPermission Denied!\e[0m";
 exit 0
 fi
 clear 
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\E[0;100;33m         • KERNEL UPDATE •         \E[0m"
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[44;1;39m              ⇱ KERNEL ENVY UPDATE ⇲             \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e ""
 echo -e "[ \033[32mInfo\033[0m ] Start Updating Kernel"
 echo -e ""
@@ -74,7 +74,7 @@ fi
 echo -e   ""
 echo -e "[ \033[32mInfo\033[0m ] DONE Updating Kernel"
 echo -e   ""
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e ""
 echo "[ \033[32mInfo\033[0m ] Your VPS Will Be Reboot In 5s"
 echo -e ""
