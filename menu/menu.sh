@@ -87,9 +87,9 @@ tram=$( free -m | awk 'NR==2 {print $2}' )
 uram=$( free -m | awk 'NR==2 {print $3}' )
 fram=$( free -m | awk 'NR==2 {print $4}' )
 clear 
-echo -e "\e[36m╒════════════════════════════════════════════╕\033[0m"
-echo -e " \E[0;41;36m                INFO ENVY SERVER VPS               \E[0m"
-echo -e "\e[36m╘════════════════════════════════════════════╛\033[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[44;1;39m              ⇱ ENVY PREMIUM VPN ⇲             \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "                                                                                         "
 echo -e "\e[33m Operating System     \e[0m:  "`hostnamectl | grep "Operating System" | cut -d ' ' -f5-`	
 echo -e "\e[33m Total Amount Of RAM  \e[0m:  $tram MB"
@@ -97,9 +97,9 @@ echo -e "\e[33m System Uptime        \e[0m:  $uptime "
 echo -e "\e[33m Isp Name             \e[0m:  $ISP"
 echo -e "\e[33m Domain               \e[0m:  $domain"	
 echo -e "\e[33m Ip Vps               \e[0m:  $IPVPS"	
-echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "                 • SCRIPT ENVY MENU •                 "
-echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[44;1;39m              ⇱ ENVY PREMIUM MENU ⇲             \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e " [\e[36m•1\e[0m] SSH & OPENVPN MENU  [\e[36m•5\e[0m] SYSTEM MENU"
 echo -e " [\e[36m•2\e[0m] VMESS MENU          [\e[36m•6\e[0m] STATUS SERVICE"
 echo -e " [\e[36m•3\e[0m] VLESS MENU          [\e[36m•7\e[0m] CLEAR RAM CACHE"
@@ -107,10 +107,10 @@ echo -e " [\e[36m•4\e[0m] TROJAN GO MENU      [\e[36m•8\e[0m] TROJAN GFW MEN
 echo -e   ""
 echo -e   " Press x or [ Ctrl+C ] • To-Exit-Script"
 echo -e   ""
-echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e " \e[33mClient Name    \E[0m: $Name"
 echo -e " \e[33mScript Expired \E[0m: $Exp2"
-echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e   ""
 read -p " Select menu :  "  opt
 echo -e   ""
