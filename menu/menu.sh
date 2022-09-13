@@ -124,4 +124,5 @@ case $opt in
 7) clear ; clearcache ;;
 8) clear ; m-trojan ;;
 x) exit ;;
+*) echo "Anda salah tekan " ; sleep 1 ; menu ;;
 esac
