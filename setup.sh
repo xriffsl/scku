@@ -20,7 +20,7 @@ BURIQ () {
     done
     rm -f  /root/tmp
 }
-# https://raw.githubusercontent.com/envy26/scku/main/anjay/allow 
+# https://raw.githubusercontent.com/SIJA/perizinan/main/main/allow 
 MYIP=$(curl -sS ipv4.icanhazip.com)
 Name=$(curl -sS https://raw.githubusercontent.com/envy26/scku/main/anjay/allow | grep $MYIP | awk '{print $2}')
 echo $Name > /usr/local/etc/.$Name.ini
@@ -47,7 +47,7 @@ PERMISSION () {
     fi
     BURIQ
 }
-
+SIJA="autosscript.site/aio"
 clear
 red='\e[1;31m'
 green='\e[0;32m'
@@ -67,7 +67,7 @@ if [ "${EUID}" -ne 0 ]; then
 fi
 if [ "$(systemd-detect-virt)" == "openvz" ]; then
 		echo "OpenVZ is not supported"
-		exit 1
+		
 fi
 
 localip=$(hostname -I | cut -d\  -f1)
@@ -161,7 +161,6 @@ chmod 644 /root/.profile
 
 echo -e "[ ${green}INFO${NC} ] Preparing the install file"
 apt install git curl -y >/dev/null 2>&1
-apt install python -y >/dev/null 2>&1
 echo -e "[ ${green}INFO${NC} ] Aight good ... installation file is ready"
 sleep 2
 echo -ne "[ ${green}INFO${NC} ] Check permission : "
@@ -183,26 +182,39 @@ sleep 3
 mkdir -p /var/lib/SIJA >/dev/null 2>&1
 echo "IP=" >> /var/lib/SIJA/ipvps.conf
 
+if [ -f "/etc/xray/domain" ]; then
+echo ""
+clear
+#echo -e "[ ${green}INFO${NC} ] Script Already Installed"
+echo -ne "[ ${yell}WARNING${NC} ] ENVY ITU GANTENG JADI HARUS PILIH ? (y/n)? "
+read answer
+if [ "$answer" == "${answer#[Yy]}" ] ;then
+rm setup.sh
+sleep 10
+exit 0
+else
+clear
+fi
+fi
+
 echo ""
 wget -q https://raw.githubusercontent.com/envy26/scku/main/tools.sh;chmod +x tools.sh;./tools.sh
 rm tools.sh
 clear
-yellow "Add Domain for vmess/vless/trojan dll"
-echo " "
-read -rp "Input ur domain : " -e pp
-    if [ -z $pp ]; then
-        echo -e "
-        Nothing input for domain!
-        Then a random domain will be created"
-    else
         echo "$pp" > /root/scdomain
 	echo "$pp" > /etc/xray/scdomain
 	echo "$pp" > /etc/xray/domain
 	echo "$pp" > /etc/v2ray/domain
 	echo $pp > /root/domain
         echo "IP=$pp" > /var/lib/SIJA/ipvps.conf
-    fi
-    
+#install Cloudflare
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "$green      Install Cloudflare   $NC"
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+sleep 2
+clear
+wget -q "https://raw.githubusercontent.com/envy26/scku/main/cf.sh" && chmod +x cf.sh && ./cf.sh
+clear
 #install ssh ovpn
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$green      Install SSH / WS               $NC"
@@ -313,8 +325,3 @@ exit 0
 else
 reboot
 fi
-
-
-
-
-
