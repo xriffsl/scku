@@ -22,9 +22,9 @@ echo -e "\e[31mPermission Denied!\e[0m";
 exit 0
 fi
 clear
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\E[0;100;33m       • XRAY / VLESS ENVY MENU •         \E[0m"
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[44;1;39m              ⇱ XRAY/VLESS ENVY MENU ⇲             \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e ""
 echo -e " [\e[36m•1\e[0m] Create Account XRAY Vless Websocket "
 echo -e " [\e[36m•2\e[0m] Trial Account XRAY Vless "
@@ -36,7 +36,7 @@ echo -e " [\e[31m•0\e[0m] \e[31mBACK TO MENU\033[0m"
 echo -e ""
 echo -e   "Press x or [ Ctrl+C ] • To-Exit"
 echo ""
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e ""
 read -p " Select menu :  "  opt
 echo -e ""
