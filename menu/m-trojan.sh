@@ -21,7 +21,7 @@ exit 0
 fi
 clear 
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\E[0;100;33m      • TROJAN GFW MENU •          \E[0m"
+echo -e "\E[0;100;33m      • TROJAN GFW ENVY MENU •          \E[0m"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e ""
 echo -e " [\e[36m•1\e[0m] Create Account Trojan "
