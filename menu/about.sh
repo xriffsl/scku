@@ -20,9 +20,9 @@ echo -e "\e[31mPermission Denied!\e[0m";
 exit 0
 fi
 clear
-echo -e "\e[36m╒════════════════════════════════════════════╕\033[0m"
-echo -e " \E[0;41;36m                 INFO SERVER VPS               \E[0m"
-echo -e "\e[36m╘════════════════════════════════════════════╛\033[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[44;1;39m              ⇱ SERVER ENVY MENU ⇲             \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu"
 menu
