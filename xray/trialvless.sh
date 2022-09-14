@@ -55,12 +55,9 @@ grpc=`cat<<EOF
       "tls": "tls"
 }
 EOF`
-vmess_base641=$( base64 -w 0 <<< $vless_json1)
-vmess_base642=$( base64 -w 0 <<< $vless_json2)
-vmess_base643=$( base64 -w 0 <<< $vless_json3)
-vmesslink1="vless://$(echo $asu | base64 -w 0)"
-vmesslink2="vless://$(echo $ask | base64 -w 0)"
-vmesslink3="vless://$(echo $grpc | base64 -w 0)"
+vlesslink1="vless://${uuid}@${domain}:$tls?path=/vless&security=tls&encryption=none&type=ws#${user}"
+vlesslink2="vless://${uuid}@${domain}:$none?path=/vless&encryption=none&type=ws#${user}"
+vlesslink3="vless://${uuid}@${domain}:$tls?mode=gun&security=tls&encryption=none&type=grpc&serviceName=vless-grpc&sni=bug.com#${user}"
 systemctl restart xray > /dev/null 2>&1
 service cron restart > /dev/null 2>&1
 clear
