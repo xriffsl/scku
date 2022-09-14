@@ -21,7 +21,7 @@ exit 0
 fi
 clear 
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[44;1;39m              ⇱ TROJAN GFW ENVY MENU ⇲             \E[0m"
+echo -e "\E[44;1;39m              ⇱ TROJAN GFW ENVY MENU ⇲          \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e ""
 echo -e " [\e[36m•1\e[0m] Create Account Trojan "
